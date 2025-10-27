@@ -1,0 +1,23 @@
+name: Health check
+
+on:
+  schedule:
+    - cron: "0 6 * * 6"  # Every Saturday at 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install uv and jq
+        run: |
+          pip install uv jq
+
+      - name: Run health check
+        run: |
+          chmod +x domene-expired.py
+          ./domene-expired.py --json | jq -e '.[0].domain' > /dev/null
