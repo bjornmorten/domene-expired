@@ -22,7 +22,6 @@ domene-expired [options]
 | `-j, --json`             | Output JSON format                          |
 | `-c, --csv`              | Output CSV format                           |
 | `-y, --force`            | Overwrite output file if it already exists  |
-| `-v, --version`          | Show version information                    |
 | `-h, --help`             | Show help message and exit                  |
 
 ## Example output
