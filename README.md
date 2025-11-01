@@ -29,7 +29,7 @@ domene-expired [options]
 ### Default
 
 ```
-2025-11-01  bjornmorten.no
+2025-11-01	bjornmorten.no
 2025-11-01	iku-toppene.no
 2025-11-01	eksempel.no
 ```
