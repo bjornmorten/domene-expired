@@ -21,7 +21,10 @@ jobs:
         run: |
           pip install uv jq
 
+      - name: Install package
+        run: |
+          uv pip install -e . --system
+
       - name: Run health check
         run: |
-          chmod +x domene-expired.py
-          ./domene-expired.py --json | jq -e '.[0].domain' > /dev/null
+          domene-expired --json | jq -e '.[0].domain' > /dev/null

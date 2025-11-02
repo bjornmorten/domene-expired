@@ -1,0 +1,17 @@
+[project]
+name = "domene-expired"
+version = "1.0.0"
+description = "Fetch expired and soon-to-expire .no and .se domains from domene.shop"
+authors = [{ name = "bjornmorten", email = "bjornmdev@proton.me" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/bjornmorten/domene-expired"
+Repository = "https://github.com/bjornmorten/domene-expired"
+Issues = "https://github.com/bjornmorten/domene-expired/issues"
+
+[project.scripts]
+domene-expired = "domene_expired:main"
