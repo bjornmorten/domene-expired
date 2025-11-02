@@ -21,10 +21,6 @@ jobs:
         run: |
           pip install uv jq
 
-      - name: Install package
-        run: |
-          uv pip install -e .
-
       - name: Run health check
         run: |
-          uv run domene-expired --json | jq -e '.[0].domain' > /dev/null
+          uvx --from . domene-expired --json | jq -e '.[0].domain' > /dev/null
