@@ -23,8 +23,8 @@ jobs:
 
       - name: Install package
         run: |
-          uv pip install -e . --system
+          uv pip install -e .
 
       - name: Run health check
         run: |
-          domene-expired --json | jq -e '.[0].domain' > /dev/null
+          uv run domene-expired --json | jq -e '.[0].domain' > /dev/null
